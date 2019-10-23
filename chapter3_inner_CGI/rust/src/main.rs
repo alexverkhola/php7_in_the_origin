@@ -12,8 +12,8 @@ fn main() {
     // println!("{}", now);
 
     //Send headers
-    println!("Content-type: text/html\n");
-   // println!("Pragma: no-cache\n");
+    println!("Content-type: text/html");
+    println!("Pragma: no-cache\n");
     println!("\n");
 
     //Send html document
