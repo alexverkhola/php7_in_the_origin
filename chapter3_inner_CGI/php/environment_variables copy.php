@@ -9,8 +9,12 @@
         background-color:lightgrey;
       }
 
-      form {
+      div{
         text-align: center;
+      }
+
+      form {
+        display: inline;
       }
 
       input {
@@ -23,9 +27,14 @@
   </head>
 
   <body>
-    <form method="GET" action="index.php">
-      <input type="submit" name="button" value="Send query string">
-    </form>
+    <div class="forms">
+      <form method="GET" action="environment_variables.php">
+        <input type="submit" name="button" value="Send GET request">
+      </form>
+      <form method="POST" action="environment_variables.php?variable=value">
+        <input type="submit" name="button" value="Send POST request">
+      </form>
+    </div>
 
     <?php      
       echo "<p>HTTP-ACCEPT: " . getenv("HTTP_ACCEPT") . '</p>'; 
@@ -38,6 +47,7 @@
       echo "<p>SCRIPT_NAME : " . getenv("SCRIPT_NAME");
       echo "<p>REQUEST_METHOD : " . getenv("REQUEST_METHOD");
       echo "<p>QUERY_STRING : " . getenv("QUERY_STRING");
+      echo "<p>CONTENT_LENGTH : " . getenv("CONTENT_LENGTH");
     ?>
 
   </body>
