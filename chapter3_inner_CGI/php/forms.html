@@ -6,12 +6,129 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Forms</title>
     <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
         body {
             background-color: lightgray;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        form {
+            border-radius: 10px;
+            border-color: black;
+            background-color: white;
+            width: 400px;
+            margin: 10px 0 10px 30%;
+            padding: 5px;
+        }
+
+        input {
+            border-radius: 5px;
+            border-color: black;
+            text-align: center;
+        }
+
+        .check1{
+            background-color: red;
+        }
+
+        .check2 {
+            background-color: blue;
         }
     </style>
 </head>
 <body>
-    
+    <ul>
+        <li>
+            <form action="/forms.php" >
+                <p>The form</p>
+                <input type="submit" value="Go!" name="button">
+            </form>
+        </li>
+        <li>
+            <form action="/forms.php" >
+                <p>Text form</p>
+                <input type="text" value="Some value" name="name" size="10" maxlength="10">
+            </form>
+        </li>
+        <li>
+            <form action="/forms.php" >
+                <p>Password form</p>
+                <input type="password" value="*****" name="password" size="10" maxlength="10">
+            </form>
+        </li>
+        <li>
+            <form action="forms.html" >
+                <p>Hidden field</p>
+                <input type="hidden" name="email" value="olexiy86@yahoo.com">
+                <p>Send email to the author:</p>
+                <input type="text" name="email_text">
+                <p><input type="submit" value="Send" name="doSend"></p>
+            </form>
+        </li>
+        <li>
+            <form action="forms.html" >
+                <p>Checkbox form</p>
+                Choice 1
+                <input type="checkbox" name="choice 1" value="choice 1">
+                Choice 2
+                <input type="checkbox" name="choice 2"  value="choice 2">
+                <p><input type="submit" value="Send" name="doSend"></p>
+            </form>
+        </li>
+        <li>
+            <form action="forms.html" >
+                <p>Radio form</p>
+                <input type="radio" class="check1" name="check1">
+                <input type="radio" class="check2" name="check2">
+                <input type="radio" class="check1" name="check1"> <br>
+                <input type="radio" class="check2" name="check2">
+                <input type="radio" class="check1" name="check1">
+                <input type="radio" class="check2" name="check2">
+                <p><input type="submit" value="Send" name="doSend"></p>
+            </form>
+        </li>
+        <li>
+            <form action="forms.html" >
+                <p>Reset form</p>
+                <input type="text" value="Default text">
+                <p><input type="reset" value="reset data" name="reset data"></p>
+            </form>
+        </li>
+        <li>
+            <form action="forms.html" >
+                <p>Image form</p>
+                <input type="image" src="black_rectangle.png" alt="">
+                <p><input type="submit" value="Send" name="doSend"></p>
+            </form>
+        </li>
+        <li>
+            <form action="forms.html" >
+                <p>Textarea form</p>
+                <textarea name="text"  cols="20" rows="3">Default text</textarea>
+                <p><input type="submit" value="Send" name="doSend"></p>
+            </form>
+        </li>
+        <li>
+            <form action="forms.html" >
+                <p>Select form</p>
+                <select name="select" size="3" multiple>
+                    <option value="red">red</option>
+                    <option value="green" selected>green</option>
+                    <option value="blue" selected>blue</option>
+                </select>
+                <p><input type="submit" value="Send" name="doSend"></p>
+            </form>
+        </li>
+        
+
+    </ul>
 </body>
 </html>
