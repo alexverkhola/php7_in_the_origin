@@ -10,7 +10,7 @@
     <?php 
         if(!isset($_REQUEST["doGo"])) {
             ?>
-            <form action="hello.php">
+            <form action="<?=$_SERVER["SCRIPT_NAME"]?>">
                 Login: <input type="text" name="login" value=""><br>
                 Password: <input type="password" name="password" value=""><br>
                 <input type="submit" name="doGo" value="Log in">    
